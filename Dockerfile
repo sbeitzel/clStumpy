@@ -54,4 +54,4 @@ USER stumpy:stumpy
 
 # Start the stumpy service when the image is run, default to listening on 1081 and 9191 in production environment
 ENTRYPOINT ["./stumpy"]
-CMD ["--smtp-port" "1081" "--pop-port" "9191" "--store-size" "10" "--threads" "2"]
+CMD ["--smtp-port", "1081", "--pop-port", "9191", "--store-size", "10", "--threads", "2"]

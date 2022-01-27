@@ -9,7 +9,7 @@ let package = Package(
         .macOS(.v12)
     ],
     dependencies: [
-        .package(url: "https://github.com/sbeitzel/stumpylib.git", from: "1.1.0"),
+        .package(url: "https://github.com/sbeitzel/stumpylib.git", from: "1.1.1"),
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.2")
     ],
     targets: [
