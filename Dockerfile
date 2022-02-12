@@ -46,11 +46,14 @@ RUN useradd --user-group --create-home --system --skel /dev/null --home-dir /app
 # Switch to the new home directory
 WORKDIR /app
 
-# Copy built executable and any staged resources from builder
+# Copy built executable
 COPY --from=build --chown=stumpy:stumpy /staging /app
 
 # Ensure all further commands run as the stumpy user
 USER stumpy:stumpy
+
+EXPOSE 1081
+EXPOSE 9191
 
 # Start the stumpy service when the image is run, default to listening on 1081 and 9191 in production environment
 ENTRYPOINT ["./stumpy"]
