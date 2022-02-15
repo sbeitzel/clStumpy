@@ -9,14 +9,14 @@ let package = Package(
         .macOS(.v12)
     ],
     dependencies: [
-        .package(url: "https://github.com/sbeitzel/stumpylib.git", from: "1.1.3"),
+        .package(url: "https://github.com/sbeitzel/StumpyNIO.git", from: "1.0.0"),
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.2")
     ],
     targets: [
         .executableTarget(
             name: "stumpy",
             dependencies: [
-                .product(name: "stumpylib", package: "stumpylib"),
+                .product(name: "StumpyNIO", package: "StumpyNIO"),
                 .product(name: "ArgumentParser", package: "swift-argument-parser")
             ])
     ]
