@@ -2,7 +2,7 @@ import ArgumentParser
 import Foundation
 import Logging
 import NIO
-import StumpyLib
+import StumpyNIO
 
 @main
 struct Stumpy: ParsableCommand {
