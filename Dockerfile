@@ -1,7 +1,7 @@
 # ================================
 # Build image
 # ================================
-FROM pirateguillermo/swiftarm:latest as build
+FROM pirateguillermo/swift:latest as build
 
 # Install OS updates
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
@@ -34,7 +34,9 @@ RUN cp "$(swift build --package-path /build -c release --show-bin-path)/stumpy" 
 # ================================
 # Run image
 # ================================
-FROM pirateguillermo/swiftarm:latest
+FROM pirateguillermo/swift:latest
+
+LABEL maintainer="sbeitzel@pobox.com"
 
 # Make sure all system packages are up to date.
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && \
