@@ -1,4 +1,17 @@
 # ================================
+# Dev image
+# ================================
+FROM pirateguillermo/swift:latest as dev
+
+RUN mkdir /app
+
+# Set up a build area
+WORKDIR /build
+
+EXPOSE 1081
+EXPOSE 9191
+
+# ================================
 # Build image
 # ================================
 FROM pirateguillermo/swift:latest as build
