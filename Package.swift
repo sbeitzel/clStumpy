@@ -9,8 +9,8 @@ let package = Package(
         .macOS(.v12)
     ],
     dependencies: [
+//        .package(url: "https://github.com/OpenCombine/OpenCombine.git", "0.12.0"),
         .package(url: "https://github.com/sbeitzel/StumpyNIO.git", from: "1.2.1"),
-        // for development, no really
 //        .package(path: "/opt/StumpyNIO"),
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.2")
     ],
